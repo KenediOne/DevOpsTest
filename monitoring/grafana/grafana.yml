@@ -10,7 +10,7 @@ rule_files:
   - "alerts.yml"
 
 scrape_configs:
-  - job_name: 'java-app'
+  - job_name: 'app'
     metrics_path: /actuator/prometheus
     static_configs:
-      - targets: ['host.docker.internal:8080']
+      - targets: ['app:8080']
